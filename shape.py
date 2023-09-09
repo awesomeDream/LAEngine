@@ -42,6 +42,9 @@ class Rect:
     self.y = y
     self.w = w
     self.h = h
+    
+  def point(self, x, y):
+    return self.x <= x and x <= self.x + self.w and self.y <= y and y <= self.y + self.h
   
   def draw(self, screen, color = BLACK):
     pygame.draw.rect(screen, color, (self.x, self.y, self.w, self.h), 1)
